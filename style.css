@@ -33,29 +33,47 @@ header {
   justify-content: center;
 
 }
-
+.logo {
+  background: url('./assets/Triangles.png') 50% 50% / contain no-repeat;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10% 5%;
+  max-height: 500px;
 }
+
 h1 {
   margin: 0;
   font-size: 3rem;
+  padding: 0;
 }
 img {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
+  padding: 20px 20px;
+  filter: drop-shadow(0 0 20px rgba(0, 200, 255, 0.5));
 }
 
-h2 {
+h3 {
   font-size: 1.5rem;
   font-weight: 200;
   text-transform: uppercase;
   margin-top: 0;
   text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #00c8ff,0 0 0.6em #00c8ff, 0 0 0.8em #00c8ff, 0 0 1.0em #00c8ff, 0 0 1.2em #00c8ff;
 }
+h2 {
+  font-size: 4.5rem;
+  font-family: 'Seaweed Script', 'Comic Sans', cursive;
+  color: #d600be;
+  margin: 0 auto 20px;
+  text-shadow: .05em .05em #000, 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #d600be,0 0 0.6em #d600be, 0 0 0.8em #d600be, 0 0 1.0em #d600be, 0 0 1.2em #d600be, 0 0 1.8em #d600be;
+}
 ul {
   display: flex;
   list-style: none;
   font-size: 1.5rem;
-  margin: 0 auto;
+  margin: 0 auto 5vh;
   width: 200px;
   padding: 0;
   justify-content: space-between;
@@ -82,5 +100,8 @@ ul a:hover {
   }
   body {
     background: url('./assets/synthwave.jpg')  50% 50% / cover;
+  }
+  h2 {
+    font-size: 2.5rem;
   }
 }
