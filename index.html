@@ -5,34 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./styles/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:200|Seaweed+Script|Audiowide" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide|Lato:300|Seaweed+Script" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="./scripts/scripts.js"></script>
   <title>Eugene Michasiw</title>
 </head>
 <body>
   <header>
-    <video poster="./assets/synthwave.jpg" id="bgvid" playsinline autoplay muted loop>
-      <source src="./assets/synthwave.mp4" type="video/mp4">
-    
-    </video>
-    <div class="logo">
-      <h1><img src="./assets/Logo.png" alt="Eugene Michasiw"></h1>
-      <h2>Front-end Developer</h2>
+    <div id='hero'>
+      <div class='layer-bg layer' data-depth='0.10' data-type='parallax'></div>
+      <div class='layer-1 layer' data-depth='0.70' data-type='parallax'></div>
+      <div class='layer-2 layer' data-depth='1'></div>
+      <div class="logo">
+        <h1><img src="./assets/Logo.png" alt="Eugene Michasiw"></h1>
+        <h2>Front-end Developer</h2>
+      </div>
+      <ul>
+        <li><a href="mailto:eugene@michasiw.com"><i class="far fa-envelope"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/eugenefm/"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://twitter.com/eugene_fm"><i class="fab fa-twitter"></i></a></li>
+      </ul>
+      </div>
     </div>
-    <h3>Portfolio Coming Soon</h3>
-    <ul>
-      <li><a href="mailto:eugene@michasiw.com"><i class="far fa-envelope"></i></a></li>
-      <li><a href="https://www.linkedin.com/in/eugenefm/"><i class="fab fa-linkedin-in"></i></a></li>
-      <li><a href="https://twitter.com/eugene_fm"><i class="fab fa-twitter"></i></a></li>
-    </ul>
+    <div class="animation">
+
+      <div class="scroller"></div>
+      <div class="stripe1"></div>
+      <div class="stripe2"></div>
+      <div class="stripe3"></div>
+      <div class="stripe4"></div>
+      <div class="stripe5"></div>
+    
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+      <div class="line4"></div>
+      <div class="line5"></div>
+
+    </div>
+    
   </header>
   <main>
-    <section>
+    <section class="bio">
       <div class="wrapper">
         <h2>About Me</h2>
         <div class="twoColumn">
           <div class="col1 textBox">
+            <img src="./assets/maxEugene.jpg">
             <h3>Bio</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ab nulla numquam earum! Officia illum fugiat nam delectus exercitationem! Fugit praesentium a odit minima pariatur exercitationem suscipit officiis recusandae ea.</p>
             <p>Cum, perferendis harum. Iure recusandae est velit rem laboriosam nisi, nostrum neque, architecto reiciendis, laudantium in. Quas eligendi unde, quae porro, accusamus ipsam ad culpa nemo vitae in iure aperiam!</p>
@@ -58,7 +78,7 @@
             </ul>
           </div>
         </div>
-        <a href="">
+        <a href="" class="button">
           Download Resume
         </a>
       </div>
@@ -67,86 +87,99 @@
       <div class="wrapper">
         <h2>Portfolio</h2>
         <div class="portfolioItem">
-          <div class="portfolioPreview"></div>
+          <div class="portfolioPreview">
+            <img src="http://www.placebacon.net/400/400">
+          </div>
           <dic class="portfolioDescription">
             <h3>Project Name</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur reiciendis facere aut ab, maxime molestias. Veritatis mollitia, deserunt nemo expedita illo voluptatibus, iusto optio tenetur rem quis commodi? Dignissimos.</p>
-            <ul>
+            <ul class="skills">
               <li>skill1</li>
               <li>skill2</li>
               <li>skill3</li>
               <li>skill4</li>
               <li>skill5</li>
             </ul>
-            <a href="">view live</a>
+            <a href="" class="button">view live</a>
           </dic>
         </div>
         <div class="portfolioItem">
-          <div class="portfolioPreview"></div>
+          <div class="portfolioPreview">
+            <img src="https://www.placecage.com/400/400">
+          </div>
           <dic class="portfolioDescription">
             <h3>Project Name</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur reiciendis facere aut ab, maxime molestias.
             Veritatis mollitia, deserunt nemo expedita illo voluptatibus, iusto optio tenetur rem quis commodi? Dignissimos.</p>
-            <ul>
+            <ul class="skills">
               <li>skill1</li>
               <li>skill2</li>
               <li>skill3</li>
               <li>skill4</li>
               <li>skill5</li>
             </ul>
-            <a href="">view live</a>
+            <a href="" class="button">view live</a>
           </dic>
         </div>
         <div class="portfolioItem">
-          <div class="portfolioPreview"></div>
+          <div class="portfolioPreview">
+            <img src="https://www.placecage.com/400/400">
+          </div>
           <dic class="portfolioDescription">
             <h3>Project Name</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur reiciendis facere aut ab, maxime molestias.
             Veritatis mollitia, deserunt nemo expedita illo voluptatibus, iusto optio tenetur rem quis commodi? Dignissimos.</p>
-            <ul>
+            <ul class="skills">
               <li>skill1</li>
               <li>skill2</li>
               <li>skill3</li>
               <li>skill4</li>
               <li>skill5</li>
             </ul>
-            <a href="">view live</a>
+            <a href="" class="button">view live</a>
           </dic>
         </div>
         <div class="portfolioItem">
-          <div class="portfolioPreview"></div>
+          <div class="portfolioPreview">
+            <img src="https://www.placecage.com/400/400">
+          </div>
           <dic class="portfolioDescription">
             <h3>Project Name</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur reiciendis facere aut ab, maxime molestias.
             Veritatis mollitia, deserunt nemo expedita illo voluptatibus, iusto optio tenetur rem quis commodi? Dignissimos.</p>
-            <ul>
+            <ul class="skills">
               <li>skill1</li>
               <li>skill2</li>
               <li>skill3</li>
               <li>skill4</li>
               <li>skill5</li>
             </ul>
-            <a href="">view live</a>
+            <a href="" class="button">view live</a>
           </dic>
         </div>
         <div class="portfolioItem">
-          <div class="portfolioPreview"></div>
+          <div class="portfolioPreview">
+            <img src="https://www.placecage.com/400/400">
+          </div>
           <dic class="portfolioDescription">
             <h3>Project Name</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur reiciendis facere aut ab, maxime molestias.
             Veritatis mollitia, deserunt nemo expedita illo voluptatibus, iusto optio tenetur rem quis commodi? Dignissimos.</p>
-            <ul>
+            <ul class="skills">
               <li>skill1</li>
               <li>skill2</li>
               <li>skill3</li>
               <li>skill4</li>
               <li>skill5</li>
             </ul>
-            <a href="">view live</a>
+            <a href="" class="button">view live</a>
           </dic>
         </div>
       </div>
     </section>
   </main>
+  <footer>
+    <p>Copyright &copy; 2019 Eugene Michasiw</p>
+  </footer>
 </body>
 </html>

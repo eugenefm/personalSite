@@ -2,9 +2,13 @@
 
 
 p {
-  color: white;
-  font-family: lato;
+  color: #fff;
+  font-family: 'Lato';
   line-height: 1.6;
+  font-weight: 300;
+}
+li {
+  color: #fff;
 }
 
 h1,
@@ -33,14 +37,18 @@ video {
   background-size: cover;
   transition: 1s opacity;
   transform: translate(-50%, -50%);
+  display: none;
+}
+img {
+  max-width: 100%;
 }
 
 header {
   text-align: center;
-  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
   width: 100%;
   height: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   background: rgba(44, 62, 80,0);
   color: #fff;
   display: flex;
@@ -58,7 +66,7 @@ header {
 
     a {
       color: white;
-      text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #00c8ff,0 0 0.6em #00c8ff, 0 0 0.8em #00c8ff, 0 0 1.0em #00c8ff, 0 0 1.2em #00c8ff;
+      text-shadow:  0 0 0.2em #fff, 0 0 0.4em #00c8ff;
       transition: all 0.3s;
 
       &:hover {
@@ -74,11 +82,11 @@ header {
     font-family: 'Seaweed Script', 'Comic Sans', cursive;
     color: #d600be;
     margin: 0 auto 20px;
-    text-shadow: .05em .05em #000, 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #d600be,0 0 0.6em #d600be, 0 0 0.8em #d600be, 0 0 1.0em #d600be, 0 0 1.2em #d600be, 0 0 1.8em #d600be;
+    text-shadow: .05em .05em #000, 0 0 0.2em #fff, 0 0 0.6em #d600be;
   }
   h3 {
     font-size: 1.5rem;
-    font-weight: 200;
+    font-weight: 300;
     text-transform: uppercase;
     margin-top: 0;
     text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #00c8ff,0 0 0.6em #00c8ff, 0 0 0.8em #00c8ff, 0 0 1.0em #00c8ff, 0 0 1.2em #00c8ff;
@@ -92,12 +100,56 @@ header {
     width: 100%;
     max-width: 500px;
     padding: 20px 20px;
-    filter: drop-shadow(0 0 20px rgba(0, 200, 255, 0.5));
   }
 } 
 
+#hero {
+	height: $heroHeight;
+	overflow: hidden;
+	position: relative;
+}
+
+.layer {
+	background-position: bottom center;
+	background-size: auto;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: $heroHeight;
+	position: fixed;
+	z-index: -200;
+}
+
+#hero-mobile {
+	display: none;
+	background-image: radial-gradient(#1b0021 60%, #000 100%);
+	height: 320px;
+}
+
+#hero, .layer {
+	min-height: 600px;
+}
+
+.layer-bg {
+	background-image: radial-gradient(#1b0021 60%, #000 100%);
+
+}
+.layer-1 {
+	background-image: url('./../assets/sun.png');
+    background-position: center bottom;
+    background-size: cover;
+		}
+.layer-2 {
+  background-image: url('./../assets/skyline.png');
+  position: absolute;
+  bottom: 0;
+  background-position: center bottom;
+    background-size: cover;
+}
+
+
 main {
-  background: #000;
+  background: url('./../assets/bottomBorder.png') #000 bottom / contain no-repeat;
+  padding-bottom: 200px;
 
   h2 {
     display: inline-block;
@@ -106,7 +158,7 @@ main {
     background: #00c8ff;
     padding: 0 20px;
     box-shadow: .1em .1em #000, .3em .3em #d600be;
-    margin: 3em 0 1em;
+    margin: 2em 0 1em;
   }
   h3 {
     display: inline-block;
@@ -144,36 +196,148 @@ main {
     li {
       display: inline-block;
       border: solid 1px #00c8ff;
-      color: white;
       padding: 5px 20px;
       margin: 10px;
     }
   }
-}
+  .bio {
+    background: #000;
 
+    h2 {
+      box-shadow: .1em .1em #000, .3em .3em #d600be;
+      margin-bottom: 140px;
+    }
+
+    p, li, h3 {
+      color: #fff;
+    }
+    h3 {
+      background: #000;
+    }
+    img {
+      display: block;
+      max-width: 200px;
+      box-shadow: 5px 5px #000, 10px 10px #00c8ff;
+      margin: -100px 0 20px;
+    }
+  }
+  .button {
+    display: inline-block;
+    padding: 5px 20px;
+    color: white;
+    text-decoration: none;
+    font-family: Audiowide;
+    font-size: 1.2rem;
+    margin: 30px 0;
+    transition: all .4s;
+    background: #d600be;
+
+    &::after {
+      content: '▹';
+    }
+    
+    &:hover {
+      background: darken(#d600be, 20%);
+    }
+  }
+}
+section {
+  padding-bottom: 100px;
+}
 .logo {
-  background: url('./../assets/Triangles.png') 50% 50% / contain no-repeat;
   min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10% 5%;
+  padding: 5% 5% 0;
   max-height: 500px;
 }
 
+.portfolioItem {
+  border: solid 2px #00c8ff;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  h3 {
+    margin-left: -10px;
+  }
+  .portfolioPreview {
+    margin-right: 20px;
+    flex: 1 1 200px;
+  }
+  .portfolioDescription {
+    flex: 1 1 400px;
+  }
+}
 
 
+.image {
+  background: url('./../assets/BackgroundImage.png') bottom / cover;
+  min-height: 70vh;
+}
+footer {
+  min-height: 50px;
+  background: #1b0021;
+  p {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+  }
+}
+.animation {
+  z-index: -120;
+  width: 100vw;
+  height: 20vh;
+  max-height: 200px;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #79e2ff;
+  border-bottom: 3px solid #79e2ff;
+  box-shadow: 0 0 4px #fff, 0 0 8px #00c8ff;
+}
+	.line1, .line2, .line3, .line4, .line5 {
+  position:absolute;
+  z-index: -100;
+	top:0;left:50%;
+	width:1px;height:100%;
+	border-left:2px solid #79e2ff;
+  box-shadow: 0 0 4px #fff, 0 0 8px #00c8ff;
+	}
+	.line2 {left:70%;transform:skew(15deg);}
+	.line3 {left:30%;transform:skew(-15deg);}
+  .line4 {left:10%;transform:skew(-25deg);}
+  .line5 {left:90%;transform:skew(25deg);}
 
+.scroller, .stripe1, .stripe2, .stripe3, .stripe4, .stripe5 {
+position:absolute;
+z-index: -100;
+top:-50px;left:0;
+width:100%;
+border-top: 5px solid #79e2ff;
+animation:drive 6.0s ease-in infinite;
+will-change: transform, border-width;
+box-shadow: 0 0 4px #fff, 0 0 8px #00c8ff;
+}
+	.stripe1 {animation-delay:1.0s;}
+	.stripe2 {animation-delay:2.0s;}
+	.stripe3 {animation-delay:3.0s;}
+	.stripe4 {animation-delay:4.0s;}
+  .stripe5 {animation-delay:5.0s;}
+  
+@keyframes drive {
+  from {transform: translateY(0);
+    ;border-width:1px;}
+	to {transform: translateY(250px);border-width:3px;}
+}  
 
 
 @media only screen and (max-width: 700px) {
-  video {
-    display: none;
-  }
-  header {
-    background: url('./../assets/synthwave.jpg')  50% 50% / cover;
-  }
-  h2 {
-    font-size: 2.5rem;
+  header, main {
+    h2 {
+      font-size: 2.5rem;
+    }
   }
 }
