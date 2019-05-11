@@ -1,4 +1,3 @@
-@charset "UTF-8";
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
 }
@@ -286,7 +285,7 @@ header h2 {
   margin: 0 auto 20px;
   -webkit-transform: rotateZ(-5deg);
           transform: rotateZ(-5deg);
-  text-shadow: .04em .04em 0 #000, -1px -1px 0 #000, 0 0 0.6em #d600be;
+  text-shadow: .04em .04em 0 #000, -1px -1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, 0 0 0.6em #d600be;
 }
 
 header h3 {
@@ -354,18 +353,19 @@ header img {
 }
 
 main {
-  background: url("./../assets/bottomBorder.png") #000 bottom/contain no-repeat;
+  background: url("./../assets/bottomBorder.png") #00133d bottom/contain no-repeat;
   padding-bottom: 200px;
 }
 
 main h2 {
   display: inline-block;
+  color: #00133d;
   font-size: 3rem;
   font-family: Audiowide, Arial, Helvetica, sans-serif;
   background: #00c8ff;
   padding: 0 20px;
-  -webkit-box-shadow: .1em .1em #000, .3em .3em #d600be;
-          box-shadow: .1em .1em #000, .3em .3em #d600be;
+  -webkit-box-shadow: .1em .1em #00133d, .3em .3em #d600be;
+          box-shadow: .1em .1em #00133d, .3em .3em #d600be;
   margin: 2em 0 1em;
 }
 
@@ -374,11 +374,9 @@ main h3 {
   font-size: 2rem;
   font-family: Audiowide, Arial, Helvetica, sans-serif;
   color: #fff;
-  background: #000;
-  padding: 0 10px;
-  margin-left: 10px;
-  -webkit-box-shadow: .3em .3em 0 -.2em #00c8ff;
-          box-shadow: .3em .3em 0 -.2em #00c8ff;
+  border-left: 3px solid #d600be;
+  border-bottom: 3px solid #d600be;
+  padding: 0 0 5px 10px;
 }
 
 main .twoColumn {
@@ -396,12 +394,8 @@ main .twoColumn .col1, main .twoColumn .col2 {
   padding: 0 20px;
 }
 
-main .twoColumn .col1 h3, main .twoColumn .col2 h3 {
-  margin-left: -10px;
-}
-
 main .textBox {
-  border: solid 2px #00c8ff;
+  border: solid 2px #d600be;
 }
 
 main .skills {
@@ -417,34 +411,32 @@ main .skills {
 
 main .skills li {
   display: inline-block;
-  border: solid 1px #00c8ff;
+  border: solid 1px #d600be;
   padding: 5px 20px;
   margin: 10px;
 }
 
 main .bio {
-  background: #000;
+  background: #1d1544 -webkit-gradient(linear, left top, left bottom, from(#d600be), color-stop(0.5%, #1d1544), to(#0b081b));
+  background: #1d1544 linear-gradient(#d600be, #1d1544 0.5%, #0b081b);
 }
 
 main .bio h2 {
-  -webkit-box-shadow: .1em .1em #000, .3em .3em #d600be;
-          box-shadow: .1em .1em #000, .3em .3em #d600be;
+  -webkit-box-shadow: .1em .1em #1d1544, .3em .3em #d600be;
+          box-shadow: .1em .1em #1d1544, .3em .3em #d600be;
   margin-bottom: 140px;
+  color: #1d1544;
 }
 
 main .bio p, main .bio li, main .bio h3 {
   color: #fff;
 }
 
-main .bio h3 {
-  background: #000;
-}
-
 main .bio img {
   display: block;
   max-width: 200px;
-  -webkit-box-shadow: 5px 5px #000, 10px 10px #00c8ff;
-          box-shadow: 5px 5px #000, 10px 10px #00c8ff;
+  -webkit-box-shadow: 5px 5px #1d1544, 10px 10px #00c8ff;
+          box-shadow: 5px 5px #1d1544, 10px 10px #00c8ff;
   margin: -100px 0 20px;
 }
 
@@ -455,18 +447,26 @@ main .button {
   text-decoration: none;
   font-family: Audiowide;
   font-size: 1.2rem;
-  margin: 30px 0;
+  margin: 30px 15px 10px 0px;
   -webkit-transition: all .4s;
   transition: all .4s;
-  background: #d600be;
-}
-
-main .button::after {
-  content: '▹';
+  background-image: linear-gradient(135deg, #f29f05, #f24405);
+  border-radius: 2px;
 }
 
 main .button:hover {
-  background: #700063;
+  border-radius: 4px;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+main .button:active, main .button:focus {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+main .secondary {
+  background-image: linear-gradient(135deg, #00c8ff, #04578f);
 }
 
 section {
@@ -490,22 +490,33 @@ section {
 }
 
 .portfolioItem {
-  border: solid 2px #00c8ff;
   padding: 20px;
   margin: 20px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
+.portfolioItem::after {
+  border-bottom: solid 1px #d600be;
+  display: block;
+  width: 80%;
+  content: " ";
+  margin: 50px auto;
+}
+
 .portfolioItem h3 {
-  margin-left: -10px;
+  margin-left: -13px;
+  margin-top: 0;
 }
 
 .portfolioItem .portfolioPreview {
-  margin-right: 20px;
+  margin-left: 40px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 200px;
           flex: 1 1 200px;
@@ -561,63 +572,63 @@ footer p {
 
 .line2 {
   left: 70%;
-  -webkit-transform: skew(15deg);
-          transform: skew(15deg);
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
 }
 
 .line3 {
   left: 30%;
-  -webkit-transform: skew(-15deg);
-          transform: skew(-15deg);
+  -webkit-transform: skew(-45deg);
+          transform: skew(-45deg);
 }
 
 .line4 {
   left: 10%;
-  -webkit-transform: skew(-25deg);
-          transform: skew(-25deg);
+  -webkit-transform: skew(-65deg);
+          transform: skew(-65deg);
 }
 
 .line5 {
   left: 90%;
-  -webkit-transform: skew(25deg);
-          transform: skew(25deg);
+  -webkit-transform: skew(65deg);
+          transform: skew(65deg);
 }
 
-.scroller, .stripe1, .stripe2, .stripe3, .stripe4, .stripe5 {
+.stripe1, .stripe2, .stripe3, .stripe4, .stripe5, .stripe6 {
   position: absolute;
   z-index: -100;
-  top: -50px;
+  top: -10px;
   left: 0;
   width: 100%;
   border-top: 5px solid #EE05F2;
-  -webkit-animation: drive 6.0s ease-in infinite;
-          animation: drive 6.0s ease-in infinite;
+  -webkit-animation: drive 5.0s ease-in infinite;
+          animation: drive 5.0s ease-in infinite;
   will-change: transform, border-width;
   -webkit-box-shadow: 0 0 4px #fff, 0 0 8px #EE05F2;
           box-shadow: 0 0 4px #fff, 0 0 8px #EE05F2;
 }
 
-.stripe1 {
+.stripe2 {
   -webkit-animation-delay: 1.0s;
           animation-delay: 1.0s;
 }
 
-.stripe2 {
+.stripe3 {
   -webkit-animation-delay: 2.0s;
           animation-delay: 2.0s;
 }
 
-.stripe3 {
+.stripe4 {
   -webkit-animation-delay: 3.0s;
           animation-delay: 3.0s;
 }
 
-.stripe4 {
+.stripe5 {
   -webkit-animation-delay: 4.0s;
           animation-delay: 4.0s;
 }
 
-.stripe5 {
+.stripe6 {
   -webkit-animation-delay: 5.0s;
           animation-delay: 5.0s;
 }
