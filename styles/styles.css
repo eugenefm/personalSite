@@ -567,13 +567,14 @@ footer p {
   width: 100vw;
   height: 20vh;
   max-height: 200px;
-  background: #000;
+  background: #00133d -webkit-gradient(linear, left top, left bottom, from(#00133d), to(#04578f));
+  background: #00133d linear-gradient(#00133d, #04578f);
   position: relative;
   overflow: hidden;
   border-top: 1px solid #ee05f2;
   border-bottom: 3px solid #ee05f2;
-  -webkit-box-shadow: 0 0 4px #fff, 0 0 8px #ee05f2;
-          box-shadow: 0 0 4px #fff, 0 0 8px #ee05f2;
+  -webkit-box-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 8px #ee05f2, 0 0 16px #ee05f2, 0 0 24px #ee05f2;
+          box-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 8px #ee05f2, 0 0 16px #ee05f2, 0 0 24px #ee05f2;
 }
 
 .line1,
