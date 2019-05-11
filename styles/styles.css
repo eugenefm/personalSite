@@ -185,7 +185,7 @@ html {
 
 p {
   color: #fff;
-  font-family: 'Lato';
+  font-family: "Lato";
   line-height: 1.6;
   font-weight: 300;
 }
@@ -203,7 +203,7 @@ h4 {
 
 .wrapper {
   max-width: 1440px;
-  width: 90%;
+  width: calc(90% - 40px);
   margin: 0 auto;
 }
 
@@ -231,7 +231,7 @@ img {
 
 header {
   text-align: center;
-  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
   width: 100%;
   height: 100%;
   min-height: 90vh;
@@ -271,7 +271,7 @@ header ul a {
 }
 
 header ul a:hover {
-  text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #d600be,0 0 0.6em #d600be, 0 0 0.8em #d600be, 0 0 1.0em #d600be, 0 0 1.2em #d600be, 0 0 1.8em #d600be;
+  text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #d600be, 0 0 0.6em #d600be, 0 0 0.8em #d600be, 0 0 1em #d600be, 0 0 1.2em #d600be, 0 0 1.8em #d600be;
 }
 
 header li {
@@ -280,12 +280,12 @@ header li {
 
 header h2 {
   font-size: 4.5rem;
-  font-family: 'Seaweed Script', 'Comic Sans', cursive;
+  font-family: "Seaweed Script", "Comic Sans", cursive;
   color: #d600be;
   margin: 0 auto 20px;
   -webkit-transform: rotateZ(-5deg);
           transform: rotateZ(-5deg);
-  text-shadow: .04em .04em 0 #000, -1px -1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, 0 0 0.6em #d600be;
+  text-shadow: 0.04em 0.04em 0 #000, -1px -1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, 0 0 0.6em #d600be;
 }
 
 header h3 {
@@ -293,7 +293,7 @@ header h3 {
   font-weight: 300;
   text-transform: uppercase;
   margin-top: 0;
-  text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #00c8ff,0 0 0.6em #00c8ff, 0 0 0.8em #00c8ff, 0 0 1.0em #00c8ff, 0 0 1.2em #00c8ff;
+  text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #00c8ff, 0 0 0.6em #00c8ff, 0 0 0.8em #00c8ff, 0 0 1em #00c8ff, 0 0 1.2em #00c8ff;
 }
 
 header h1 {
@@ -330,7 +330,8 @@ header img {
   height: 320px;
 }
 
-#hero, .layer {
+#hero,
+.layer {
   min-height: 600px;
 }
 
@@ -364,9 +365,9 @@ main h2 {
   font-family: Audiowide, Arial, Helvetica, sans-serif;
   background: #00c8ff;
   padding: 0 20px;
-  -webkit-box-shadow: .1em .1em #00133d, .3em .3em #d600be;
-          box-shadow: .1em .1em #00133d, .3em .3em #d600be;
-  margin: 2em 0 1em;
+  -webkit-box-shadow: 0.1em 0.1em #00133d, 0.3em 0.3em #d600be;
+          box-shadow: 0.1em 0.1em #00133d, 0.3em 0.3em #d600be;
+  margin: 2em 0 1em -20px;
 }
 
 main h3 {
@@ -385,9 +386,11 @@ main .twoColumn {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 0 -20px;
 }
 
-main .twoColumn .col1, main .twoColumn .col2 {
+main .twoColumn .col1,
+main .twoColumn .col2 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 400px;
           flex: 1 1 400px;
@@ -396,6 +399,7 @@ main .twoColumn .col1, main .twoColumn .col2 {
 
 main .textBox {
   border: solid 2px #d600be;
+  padding: 0 18px;
 }
 
 main .skills {
@@ -422,14 +426,7 @@ main .bio {
 }
 
 main .bio h2 {
-  -webkit-box-shadow: .1em .1em #1d1544, .3em .3em #d600be;
-          box-shadow: .1em .1em #1d1544, .3em .3em #d600be;
-  margin-bottom: 140px;
-  color: #1d1544;
-}
-
-main .bio p, main .bio li, main .bio h3 {
-  color: #fff;
+  margin-bottom: 150px;
 }
 
 main .bio img {
@@ -442,20 +439,19 @@ main .bio img {
 
 main .button {
   display: inline-block;
-  padding: 5px 20px;
+  padding: 10px 20px;
   color: white;
   text-decoration: none;
   font-family: Audiowide;
   font-size: 1.2rem;
   margin: 30px 15px 10px 0px;
-  -webkit-transition: all .4s;
-  transition: all .4s;
-  background-image: linear-gradient(135deg, #f29f05, #f24405);
-  border-radius: 2px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-image: linear-gradient(135deg, #00c8ff, #04578f);
+  border-radius: 25px;
 }
 
 main .button:hover {
-  border-radius: 4px;
   -webkit-transform: translateY(-1px);
           transform: translateY(-1px);
 }
@@ -466,7 +462,7 @@ main .button:active, main .button:focus {
 }
 
 main .secondary {
-  background-image: linear-gradient(135deg, #00c8ff, #04578f);
+  background-image: linear-gradient(135deg, #00133d, #0b081b);
 }
 
 section {
@@ -489,9 +485,30 @@ section {
   max-height: 500px;
 }
 
+.portfolio {
+  background: #fff;
+}
+
+.portfolio h3,
+.portfolio li,
+.portfolio p {
+  color: #00133d;
+}
+
+.portfolio h2 {
+  color: #fff;
+  background: #00133d;
+  -webkit-box-shadow: 0.1em 0.1em #fff, 0.3em 0.3em #00c8ff;
+          box-shadow: 0.1em 0.1em #fff, 0.3em 0.3em #00c8ff;
+}
+
+.portfolio h3,
+.portfolio .skills li {
+  border-color: #00133d;
+}
+
 .portfolioItem {
-  padding: 20px;
-  margin: 20px auto;
+  margin: 20px -20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -503,7 +520,7 @@ section {
 }
 
 .portfolioItem::after {
-  border-bottom: solid 1px #d600be;
+  border-bottom: solid 1px #00133d;
   display: block;
   width: 80%;
   content: " ";
@@ -516,16 +533,17 @@ section {
 }
 
 .portfolioItem .portfolioPreview {
-  margin-left: 40px;
+  margin: 20px;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 200px;
-          flex: 1 1 200px;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
 }
 
 .portfolioItem .portfolioDescription {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 400px;
           flex: 1 1 400px;
+  margin: 20px;
 }
 
 .image {
@@ -552,22 +570,26 @@ footer p {
   background: #000;
   position: relative;
   overflow: hidden;
-  border-top: 1px solid #EE05F2;
-  border-bottom: 3px solid #EE05F2;
-  -webkit-box-shadow: 0 0 4px #fff, 0 0 8px #EE05F2;
-          box-shadow: 0 0 4px #fff, 0 0 8px #EE05F2;
+  border-top: 1px solid #ee05f2;
+  border-bottom: 3px solid #ee05f2;
+  -webkit-box-shadow: 0 0 4px #fff, 0 0 8px #ee05f2;
+          box-shadow: 0 0 4px #fff, 0 0 8px #ee05f2;
 }
 
-.line1, .line2, .line3, .line4, .line5 {
+.line1,
+.line2,
+.line3,
+.line4,
+.line5 {
   position: absolute;
   z-index: -100;
   top: 0;
   left: 50%;
   width: 1px;
   height: 100%;
-  border-left: 2px solid #EE05F2;
-  -webkit-box-shadow: 0 0 4px #fff, 0 0 8px #EE05F2;
-          box-shadow: 0 0 4px #fff, 0 0 8px #EE05F2;
+  border-left: 2px solid #ee05f2;
+  -webkit-box-shadow: 0 0 4px #fff, 0 0 8px #ee05f2;
+          box-shadow: 0 0 4px #fff, 0 0 8px #ee05f2;
 }
 
 .line2 {
@@ -594,43 +616,48 @@ footer p {
           transform: skew(65deg);
 }
 
-.stripe1, .stripe2, .stripe3, .stripe4, .stripe5, .stripe6 {
+.stripe1,
+.stripe2,
+.stripe3,
+.stripe4,
+.stripe5,
+.stripe6 {
   position: absolute;
   z-index: -100;
   top: -10px;
   left: 0;
   width: 100%;
-  border-top: 5px solid #EE05F2;
-  -webkit-animation: drive 5.0s ease-in infinite;
-          animation: drive 5.0s ease-in infinite;
+  border-top: 5px solid #ee05f2;
+  -webkit-animation: drive 5s ease-in infinite;
+          animation: drive 5s ease-in infinite;
   will-change: transform, border-width;
-  -webkit-box-shadow: 0 0 4px #fff, 0 0 8px #EE05F2;
-          box-shadow: 0 0 4px #fff, 0 0 8px #EE05F2;
+  -webkit-box-shadow: 0 0 4px #fff, 0 0 8px #ee05f2;
+          box-shadow: 0 0 4px #fff, 0 0 8px #ee05f2;
 }
 
 .stripe2 {
-  -webkit-animation-delay: 1.0s;
-          animation-delay: 1.0s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .stripe3 {
-  -webkit-animation-delay: 2.0s;
-          animation-delay: 2.0s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .stripe4 {
-  -webkit-animation-delay: 3.0s;
-          animation-delay: 3.0s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 .stripe5 {
-  -webkit-animation-delay: 4.0s;
-          animation-delay: 4.0s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 
 .stripe6 {
-  -webkit-animation-delay: 5.0s;
-          animation-delay: 5.0s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 
 @-webkit-keyframes drive {
@@ -660,7 +687,8 @@ footer p {
 }
 
 @media only screen and (max-width: 700px) {
-  header h2, main h2 {
+  header h2,
+  main h2 {
     font-size: 2.5rem;
   }
 }

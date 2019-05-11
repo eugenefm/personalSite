@@ -1,9 +1,8 @@
-@import './partials/setup';
-
+@import "./partials/setup";
 
 p {
   color: #fff;
-  font-family: 'Lato';
+  font-family: "Lato";
   line-height: 1.6;
   font-weight: 300;
 }
@@ -20,11 +19,11 @@ h4 {
 
 .wrapper {
   max-width: 1440px;
-  width: 90%;
+  width: calc(90% - 40px);
   margin: 0 auto;
 }
 
-video { 
+video {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -33,7 +32,7 @@ video {
   width: auto;
   height: auto;
   z-index: -100;
-  background: url('./../assets/synthwave.jpg') no-repeat;
+  background: url("./../assets/synthwave.jpg") no-repeat;
   background-size: cover;
   transition: 1s opacity;
   transform: translate(-50%, -50%);
@@ -45,11 +44,11 @@ img {
 
 header {
   text-align: center;
-  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
   width: 100%;
   height: 100%;
   min-height: 90vh;
-  background: rgba(44, 62, 80,0);
+  background: rgba(44, 62, 80, 0);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -66,11 +65,13 @@ header {
 
     a {
       color: white;
-      text-shadow:  0 0 0.2em #fff, 0 0 0.4em #00c8ff;
+      text-shadow: 0 0 0.2em #fff, 0 0 0.4em #00c8ff;
       transition: all 0.3s;
 
       &:hover {
-        text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #d600be,0 0 0.6em #d600be, 0 0 0.8em #d600be, 0 0 1.0em #d600be, 0 0 1.2em #d600be, 0 0 1.8em #d600be;
+        text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff,
+          0 0 0.4em #d600be, 0 0 0.6em #d600be, 0 0 0.8em #d600be,
+          0 0 1em #d600be, 0 0 1.2em #d600be, 0 0 1.8em #d600be;
       }
     }
   }
@@ -79,18 +80,21 @@ header {
   }
   h2 {
     font-size: 4.5rem;
-    font-family: 'Seaweed Script', 'Comic Sans', cursive;
+    font-family: "Seaweed Script", "Comic Sans", cursive;
     color: #d600be;
     margin: 0 auto 20px;
     transform: rotateZ(-5deg);
-    text-shadow: .04em .04em 0 #000, -1px -1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, 0 0 0.6em #d600be;
+    text-shadow: 0.04em 0.04em 0 #000, -1px -1px 0 #000, -1px 1px 0 #000,
+      1px -1px 0 #000, 0 0 0.6em #d600be;
   }
   h3 {
     font-size: 1.5rem;
     font-weight: 300;
     text-transform: uppercase;
     margin-top: 0;
-    text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #00c8ff,0 0 0.6em #00c8ff, 0 0 0.8em #00c8ff, 0 0 1.0em #00c8ff, 0 0 1.2em #00c8ff;
+    text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff,
+      0 0 0.4em #00c8ff, 0 0 0.6em #00c8ff, 0 0 0.8em #00c8ff, 0 0 1em #00c8ff,
+      0 0 1.2em #00c8ff;
   }
   h1 {
     margin: 0;
@@ -102,54 +106,54 @@ header {
     max-width: 500px;
     padding: 20px 20px;
   }
-} 
+}
 
 #hero {
-	height: $heroHeight;
-	overflow: hidden;
-	position: relative;
+  height: $heroHeight;
+  overflow: hidden;
+  position: relative;
 }
 
 .layer {
-	background-position: bottom center;
-	background-size: auto;
-	background-repeat: no-repeat;
-	width: 100%;
-	height: $heroHeight;
-	position: fixed;
-	z-index: -200;
+  background-position: bottom center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: $heroHeight;
+  position: fixed;
+  z-index: -200;
 }
 
 #hero-mobile {
-	display: none;
-	background-image: radial-gradient(#1b0021 60%, #000 100%);
-	height: 320px;
+  display: none;
+  background-image: radial-gradient(#1b0021 60%, #000 100%);
+  height: 320px;
 }
 
-#hero, .layer {
-	min-height: 600px;
+#hero,
+.layer {
+  min-height: 600px;
 }
 
 .layer-bg {
-	background-image: radial-gradient(#1b0021 60%, #000 100%);
-
+  background-image: radial-gradient(#1b0021 60%, #000 100%);
 }
 .layer-1 {
-	background-image: url('./../assets/sun.png');
-    background-position: center bottom;
-    background-size: cover;
-		}
+  background-image: url("./../assets/sun.png");
+  background-position: center bottom;
+  background-size: cover;
+}
 .layer-2 {
-  background-image: url('./../assets/skyline.png');
+  background-image: url("./../assets/skyline.png");
   position: absolute;
   bottom: 0;
   background-position: center bottom;
-    background-size: cover;
+  background-size: cover;
 }
 
-
 main {
-  background: url('./../assets/bottomBorder.png') #00133d bottom / contain no-repeat;
+  background: url("./../assets/bottomBorder.png") #00133d bottom / contain
+    no-repeat;
   padding-bottom: 200px;
 
   h2 {
@@ -159,8 +163,8 @@ main {
     font-family: Audiowide, Arial, Helvetica, sans-serif;
     background: #00c8ff;
     padding: 0 20px;
-    box-shadow: .1em .1em #00133d, .3em .3em #d600be;
-    margin: 2em 0 1em;
+    box-shadow: 0.1em 0.1em #00133d, 0.3em 0.3em #d600be;
+    margin: 2em 0 1em -20px;
   }
 
   h3 {
@@ -169,20 +173,23 @@ main {
     font-family: Audiowide, Arial, Helvetica, sans-serif;
     color: #fff;
     border-left: 3px solid #d600be;
-    border-bottom: 3px solid #d600be;;
+    border-bottom: 3px solid #d600be;
     padding: 0 0 5px 10px;
   }
   .twoColumn {
     display: flex;
     flex-wrap: wrap;
-    
-    .col1, .col2 {
+    margin: 0 -20px;
+
+    .col1,
+    .col2 {
       flex: 1 1 400px;
       padding: 0 20px;
     }
   }
   .textBox {
     border: solid 2px #d600be;
+    padding: 0 18px;
   }
   .skills {
     display: flex;
@@ -199,17 +206,12 @@ main {
     }
   }
   .bio {
-    background: #1d1544 linear-gradient(#d600be, #1d1544 .5%, #0b081b);
+    background: #1d1544 linear-gradient(#d600be, #1d1544 0.5%, #0b081b);
 
     h2 {
-      box-shadow: .1em .1em #1d1544, .3em .3em #d600be;
-      margin-bottom: 140px;
-      color: #1d1544;
+      margin-bottom: 150px;
     }
 
-    p, li, h3 {
-      color: #fff;
-    }
     img {
       display: block;
       max-width: 200px;
@@ -219,27 +221,26 @@ main {
   }
   .button {
     display: inline-block;
-    padding: 5px 20px;
+    padding: 10px 20px;
     color: white;
     text-decoration: none;
     font-family: Audiowide;
     font-size: 1.2rem;
     margin: 30px 15px 10px 0px;
-    transition: all .4s;
-    background-image: linear-gradient(135deg, #f29f05, #f24405);
-    border-radius: 2px;
-    
+    transition: all 0.4s;
+    background-image: linear-gradient(135deg, #00c8ff, #04578f);
+    border-radius: 25px;
+
     &:hover {
-      border-radius: 4px;
       transform: translateY(-1px);
     }
-    &:active, &:focus {
+    &:active,
+    &:focus {
       transform: translateY(2px);
     }
-    
   }
   .secondary {
-    background-image: linear-gradient(135deg, #00c8ff,  #04578f);
+    background-image: linear-gradient(135deg, #00133d, #0b081b);
   }
 }
 section {
@@ -253,16 +254,34 @@ section {
   padding: 5% 5% 0;
   max-height: 500px;
 }
+.portfolio {
+  background: #fff;
 
+  h3,
+  li,
+  p {
+    color: #00133d;
+  }
+
+  h2 {
+    color: #fff;
+    background: #00133d;
+    box-shadow: 0.1em 0.1em #fff, 0.3em 0.3em #00c8ff;
+  }
+
+  h3,
+  .skills li {
+    border-color: #00133d;
+  }
+}
 .portfolioItem {
-  padding: 20px;
-  margin: 20px auto;
+  margin: 20px -20px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 
   &::after {
-    border-bottom: solid 1px #d600be;
+    border-bottom: solid 1px #00133d;
     display: block;
     width: 80%;
     content: " ";
@@ -273,17 +292,17 @@ section {
     margin-top: 0;
   }
   .portfolioPreview {
-    margin-left: 40px;
-    flex: 1 1 200px;
+    margin: 20px;
+    flex: 1 1 300px;
   }
   .portfolioDescription {
     flex: 1 1 400px;
+    margin: 20px;
   }
 }
 
-
 .image {
-  background: url('./../assets/BackgroundImage.png') bottom / cover;
+  background: url("./../assets/BackgroundImage.png") bottom / cover;
   min-height: 70vh;
 }
 footer {
@@ -303,49 +322,88 @@ footer {
   background: #000;
   position: relative;
   overflow: hidden;
-  border-top: 1px solid #EE05F2;
-  border-bottom: 3px solid #EE05F2;
-  box-shadow: 0 0 4px #fff, 0 0 8px #EE05F2;
+  border-top: 1px solid #ee05f2;
+  border-bottom: 3px solid #ee05f2;
+  box-shadow: 0 0 4px #fff, 0 0 8px #ee05f2;
 }
-.line1, .line2, .line3, .line4, .line5 {
-  position:absolute;
+.line1,
+.line2,
+.line3,
+.line4,
+.line5 {
+  position: absolute;
   z-index: -100;
-	top:0;left:50%;
-	width:1px;height:100%;
-	border-left:2px solid #EE05F2;
-  box-shadow: 0 0 4px #fff, 0 0 8px #EE05F2;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  border-left: 2px solid #ee05f2;
+  box-shadow: 0 0 4px #fff, 0 0 8px #ee05f2;
 }
-.line2 {left:70%;transform:skew(45deg);}
-.line3 {left:30%;transform:skew(-45deg);}
-.line4 {left:10%;transform:skew(-65deg);}
-.line5 {left:90%;transform:skew(65deg);}
+.line2 {
+  left: 70%;
+  transform: skew(45deg);
+}
+.line3 {
+  left: 30%;
+  transform: skew(-45deg);
+}
+.line4 {
+  left: 10%;
+  transform: skew(-65deg);
+}
+.line5 {
+  left: 90%;
+  transform: skew(65deg);
+}
 
-.stripe1, .stripe2, .stripe3, .stripe4, .stripe5, .stripe6  {
-  position:absolute;
+.stripe1,
+.stripe2,
+.stripe3,
+.stripe4,
+.stripe5,
+.stripe6 {
+  position: absolute;
   z-index: -100;
-  top:-10px;left:0;
-  width:100%;
-  border-top: 5px solid #EE05F2;
-  animation:drive 5.0s ease-in infinite;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  border-top: 5px solid #ee05f2;
+  animation: drive 5s ease-in infinite;
   will-change: transform, border-width;
-  box-shadow: 0 0 4px #fff, 0 0 8px #EE05F2;
+  box-shadow: 0 0 4px #fff, 0 0 8px #ee05f2;
 }
 
-.stripe2 {animation-delay:1.0s;}
-.stripe3 {animation-delay:2.0s;}
-.stripe4 {animation-delay:3.0s;}
-.stripe5 {animation-delay:4.0s;}
-.stripe6 {animation-delay:5.0s;}
-  
-@keyframes drive {
-  from {transform: translateY(0);
-    ;border-width:1px;}
-	to {transform: translateY(250px);border-width:3px;}
-}  
+.stripe2 {
+  animation-delay: 1s;
+}
+.stripe3 {
+  animation-delay: 2s;
+}
+.stripe4 {
+  animation-delay: 3s;
+}
+.stripe5 {
+  animation-delay: 4s;
+}
+.stripe6 {
+  animation-delay: 5s;
+}
 
+@keyframes drive {
+  from {
+    transform: translateY(0);
+    border-width: 1px;
+  }
+  to {
+    transform: translateY(250px);
+    border-width: 3px;
+  }
+}
 
 @media only screen and (max-width: 700px) {
-  header, main {
+  header,
+  main {
     h2 {
       font-size: 2.5rem;
     }
