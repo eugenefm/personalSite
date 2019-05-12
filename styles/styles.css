@@ -354,7 +354,7 @@ header img {
 }
 
 main {
-  background: url("./../assets/bottomBorder.png") #00133d bottom/contain no-repeat;
+  background: #00133d;
   padding-bottom: 200px;
 }
 
@@ -606,6 +606,7 @@ form button {
 footer {
   min-height: 50px;
   background: #1b0021;
+  border-top: 1px solid #d600be;
 }
 
 footer p {
@@ -741,27 +742,33 @@ footer p {
 
 @media only screen and (max-width: 700px) {
   header h2,
-  main h2 {
+  main h2,
+  footer h2 {
     font-size: 2.5rem;
   }
   header h3,
-  main h3 {
+  main h3,
+  footer h3 {
     font-size: 2rem;
   }
 }
 
 @media only screen and (max-width: 500px) {
   header h2,
-  main h2 {
+  main h2,
+  footer h2 {
     font-size: 2rem;
   }
   header h3,
-  main h3 {
+  main h3,
+  footer h3 {
     font-size: 1.2rem;
   }
   header p, header li,
   main p,
-  main li {
+  main li,
+  footer p,
+  footer li {
     font-size: .9rem;
   }
   form {
