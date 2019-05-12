@@ -335,7 +335,8 @@ form {
     border: none;
     border-bottom: 2px solid #d600be;
     padding: 5px 20px;
-    margin: 20px
+    margin: 20px;
+    border-radius: 0;
   }
   textarea {
     border: 2px solid #d600be;
@@ -350,7 +351,7 @@ form {
 
 footer {
   min-height: 50px;
-  background: #1b0021;
+  background: #0b081b;
   border-top: 1px solid #d600be;
   p {
     margin: 0;
@@ -455,6 +456,9 @@ footer {
     h3 {
       font-size: 2rem;
     }
+    button, .button {
+      font-size: 1rem;
+    } 
   }
 }
 @media only screen and (max-width: 500px) {
@@ -467,9 +471,12 @@ footer {
     h3 {
       font-size: 1.2rem;
     }
-    p, li {
+    p {
       font-size: .9rem;
     }
+    button, .button, .skills {
+      font-size: .8rem;
+    } 
   }
   form {
     margin: 0 -20px;

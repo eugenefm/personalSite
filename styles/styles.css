@@ -591,6 +591,7 @@ form input[type="text"], form input[type="email"], form textarea {
   border-bottom: 2px solid #d600be;
   padding: 5px 20px;
   margin: 20px;
+  border-radius: 0;
 }
 
 form textarea {
@@ -605,7 +606,7 @@ form button {
 
 footer {
   min-height: 50px;
-  background: #1b0021;
+  background: #0b081b;
   border-top: 1px solid #d600be;
 }
 
@@ -751,6 +752,13 @@ footer p {
   footer h3 {
     font-size: 2rem;
   }
+  header button, header .button,
+  main button,
+  main .button,
+  footer button,
+  footer .button {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -764,12 +772,19 @@ footer p {
   footer h3 {
     font-size: 1.2rem;
   }
-  header p, header li,
+  header p,
   main p,
-  main li,
-  footer p,
-  footer li {
+  footer p {
     font-size: .9rem;
+  }
+  header button, header .button, header .skills,
+  main button,
+  main .button,
+  main .skills,
+  footer button,
+  footer .button,
+  footer .skills {
+    font-size: .8rem;
   }
   form {
     margin: 0 -20px;
