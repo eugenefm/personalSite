@@ -356,6 +356,8 @@ header img {
 main {
   background: #00133d;
   padding-bottom: 200px;
+  -webkit-box-shadow: 0 -50px 50px 50px #1d1544;
+          box-shadow: 0 -50px 50px 50px #1d1544;
 }
 
 main h2 {
@@ -367,7 +369,7 @@ main h2 {
   padding: 0 20px;
   -webkit-box-shadow: 0.1em 0.1em #00133d, 0.3em 0.3em #d600be;
           box-shadow: 0.1em 0.1em #00133d, 0.3em 0.3em #d600be;
-  margin: 2em 0 1em -20px;
+  margin: 1em 0 1em -20px;
 }
 
 main h3 {
@@ -421,8 +423,8 @@ main .skills li {
 }
 
 main .bio {
-  background: #1d1544 -webkit-gradient(linear, left top, left bottom, from(#d600be), color-stop(0.5%, #1d1544), to(#0b081b));
-  background: #1d1544 linear-gradient(#d600be, #1d1544 0.5%, #0b081b);
+  background: #1d1544 -webkit-gradient(linear, left top, left bottom, from(#1d1544), to(#0b081b));
+  background: #1d1544 linear-gradient(#1d1544, #0b081b);
 }
 
 main .bio h2 {

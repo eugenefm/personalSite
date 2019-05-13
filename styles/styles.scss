@@ -154,6 +154,7 @@ header {
 main {
   background: #00133d;
   padding-bottom: 200px;
+  box-shadow: 0 -50px 50px 50px #1d1544;
 
   h2 {
     display: inline-block;
@@ -163,7 +164,7 @@ main {
     background: #00c8ff;
     padding: 0 20px;
     box-shadow: 0.1em 0.1em #00133d, 0.3em 0.3em #d600be;
-    margin: 2em 0 1em -20px;
+    margin: 1em 0 1em -20px;
   }
 
   h3 {
@@ -205,7 +206,7 @@ main {
     }
   }
   .bio {
-    background: #1d1544 linear-gradient(#d600be, #1d1544 0.5%, #0b081b);
+    background: #1d1544 linear-gradient(#1d1544, #0b081b);
 
     h2 {
       margin-bottom: 150px;
